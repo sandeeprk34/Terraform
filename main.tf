@@ -138,6 +138,7 @@ resource "aws_security_group" "sec" {
 #####Spinning EC2 Instance####
 resource "aws_instance" "myins" {
     ami = "${lookup(var.images, var.region)}" 
+    count = "${var.count}"
     instance_type = "t2.micro"
     associate_public_ip_address = "true"
     subnet_id = "${aws_subnet.pubsub1.id}"
