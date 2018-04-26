@@ -24,7 +24,7 @@ variable "count" {
 
 variable "instancetags" {
   type = "list"
-  default = ["Terraform-1","Terraform-2"]
+  default = ["Terraform-1","Terraform-2"]        #######This is a List Variable
 }
 
 variable "zones" {
