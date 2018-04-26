@@ -147,6 +147,10 @@ resource "aws_instance" "myins" {
     tags {
         Name = "TestEC2-${count.index}"   
     }
+    #####This is the another method to give tags using List variable delared in vars.tf file.
+    tags {
+        Name = "${element(var.instancetags,count.index)}"  
+    } 
     key_name = "${var.key_name}"
 }
 
