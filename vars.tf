@@ -18,6 +18,11 @@ variable "images" {
   }
 }
 
+variable "count" {
+  default = "2"                         
+}
+
+
 variable "zones" {
   default = ["us-west-2a", "us-west-2b"]
 }
