@@ -1,7 +1,11 @@
 ####Variables#####
+ ###Terraform supports different types pf variables
+   #1>String
+   #2>Map
+   #3>List
 
 variable "region" {
-  default = "us-west-2"
+  default = "us-west-2"                         #####This is a String Variable
 }
 
 
@@ -9,7 +13,8 @@ variable "images" {
   type = "map"
 
   default = {
-    us-west-2 = "ami-223f945a"
+    us-west-2 = "ami-223f945a"                ######This is a Map Variable
+    us-west-1 = "ami-XXXXXXXX"
   }
 }
 
