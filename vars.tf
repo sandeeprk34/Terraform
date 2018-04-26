@@ -22,6 +22,10 @@ variable "count" {
   default = "2"                         
 }
 
+variable "instancetags" {
+  type = "list"
+  default = ["Terraform-1","Terraform-2"]
+}
 
 variable "zones" {
   default = ["us-west-2a", "us-west-2b"]
